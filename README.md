@@ -1,12 +1,20 @@
 === BD Namaz Timetable ===
-Contributors: DewsofDev
-Tags: prayer times, namaz timetable, sahri, iftar, bangladesh, islamic, hijri, gregorian, timetable, countdown, fasting, ramadan, islamic calendar, wordpress plugin
+Plugin Name      : BD Namaz Timetable
+Plugin URI       : https://bdislamicqa.xyz/wordpress-plugin/
+Description      : BD Namaz Timetable is a comprehensive WordPress plugin designed to provide accurate daily Namaz (prayer) timings for districts across Bangladesh. Add the shortcode `[bd_namaz_timetable]` to any page or post where you wish to display the prayer timetable. Using the reliable Aladhan API, this plugin not only displays precise prayer times but also includes Sahri and Iftar timings, making it an essential tool for observing daily prayers and fasting, especially during Ramadan.
+Version          : 1.0
 Requires at least: 5.0
-Tested up to: 6.3
-Stable tag: 1.0
-License: GPL-2.0+
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Donate link: https://yourwebsite.com/donate
+Requires PHP     : 7.0
+Author           : Moursalin Islam & OnexusDev
+Author URI       : https://www.facebook.com/morsalinislam.bd
+License          : GPL v2 or later
+License URI      : https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain      : bd-namaz-timetable
+Domain Path      : /languages
+Tags             : bangladesh, namaz timetable, prayer times, islamic calendar, salah times, hijri date, aladhan api, district-based timings, sahri and iftar, ramadan, islamic prayer, muslim prayer times, prayer countdown
+Tested up to     : 6.2
+Stable tag       : 1.0.0
+
 
 == Description ==
 
