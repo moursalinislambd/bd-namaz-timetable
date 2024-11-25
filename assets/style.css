@@ -1,0 +1,210 @@
+/* Global styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: 28px;
+    color: #fff;
+    background: linear-gradient(135deg, #4CAF50, #008C44);
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+    font-size: 18px;
+    color: #4CAF50;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Form styling */
+.bd-namaz-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bd-namaz-form label {
+    font-size: 16px;
+    margin-right: 15px;
+    color: #555;
+}
+
+.bd-namaz-form select {
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    margin-right: 15px;
+    width: 220px;
+    transition: border-color 0.3s ease;
+}
+
+.bd-namaz-form select:focus {
+    border-color: #008C44;
+    outline: none;
+}
+
+.bd-namaz-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bd-namaz-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Main timetable container */
+.bd-namaz-timetable {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #4CAF50;
+}
+
+/* Table styling */
+table.timing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table.timing-table th,
+table.timing-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    font-size: 16px;
+}
+
+table.timing-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+table.timing-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table.timing-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table.timing-table td {
+    color: #333;
+}
+
+/* Highlight important times */
+table.timing-table td strong {
+    color: #4CAF50;
+}
+
+/* Date section styling */
+.date-section {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.date-section p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.date-section .gregorian-date {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.date-section .hijri-date {
+    font-style: italic;
+    font-size: 18px;
+}
+
+/* Countdown Timer */
+.countdown {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #d9534f;
+}
+
+.countdown .time-left {
+    color: #008C44;
+}
+
+/* Input and button styles for better user interaction */
+input[type="text"], input[type="number"], select {
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 220px;
+    margin: 10px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bd-namaz-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bd-namaz-form select, .bd-namaz-form input[type="submit"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    table.timing-table {
+        font-size: 14px;
+    }
+
+    table.timing-table th, table.timing-table td {
+        padding: 12px;
+    }
+
+    .date-section {
+        padding: 10px;
+    }
+
+    .date-section p {
+        font-size: 16px;
+    }
+}
