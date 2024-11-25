@@ -183,7 +183,7 @@ function bd_namaz_timetable_add_plugin_links($links, $file) {
     if ($file == plugin_basename(__FILE__)) {
         // Add custom links
         $new_links = array(
-            '<a href="https://yourwebsite.com/docs" target="_blank">Docs & FAQs</a>',
+            '<a href="https://github.com/moursalinislambd/bd-namaz-timetable/releases" target="_blank">Docs & FAQs</a>',
             '<a href="https://bdislamicqa.xyz/wordpress-plugin/" target="_blank">Check update</a>'
         );
 
