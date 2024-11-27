@@ -43,10 +43,12 @@ class BD_Namaz_Timetable {
         add_action('wp_enqueue_scripts', [$this, 'enqueue_styles']);
     }
 
-    // Enqueue custom CSS for the plugin
-    public function enqueue_styles() {
+   public function enqueue_styles() {
+    if (has_shortcode(get_post()->post_content, 'bd_namaz_timetable')) {
         wp_enqueue_style('bd-namaz-timetable-styles', plugins_url('assets/style.css', __FILE__));
     }
+}
+
 
     // Function to get current date in Gregorian and Hijri
     public function get_current_dates() {
@@ -192,4 +194,14 @@ function bd_namaz_timetable_add_plugin_links($links, $file) {
     }
 
     return $links;
+	
+	
+	$output = '<div id="bd-namaz-timetable-plugin">';
+$output .= '<form method="post" class="bd-namaz-form">';
+// Existing content here
+$output .= '</div>'; // Close the container
+
+	
 }
+
+
