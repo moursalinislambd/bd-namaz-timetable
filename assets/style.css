@@ -1,97 +1,217 @@
-/* Target only the plugin using its unique ID */
-#bd-namaz-timetable-plugin {
-    font-family: Arial, sans-serif;
-    border: 2px solid #009688;
-    border-radius: 8px;
-    background: #f9f9f9;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* General Styling */
+.bd-namaz-timetable {
+    font-family: 'Roboto', sans-serif;
+    margin: 20px auto;
+    padding: 25px;
+    max-width: 900px;
+    background: linear-gradient(145deg, #ffffff, #f3f4f6);
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-#bd-namaz-timetable-plugin h3 {
-    font-size: 1.5em;
-    color: #00796b;
+.bd-namaz-timetable h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a73e8;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
 }
 
-#bd-namaz-timetable-plugin .timing-table {
+.bd-namaz-timetable h3::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #1a73e8;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Form Styling */
+.bd-namaz-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.bd-namaz-form label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555555;
+}
+
+.bd-namaz-form select {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background: #f9f9f9;
+    color: #333333;
+    transition: border-color 0.3s ease;
+}
+
+.bd-namaz-form select:focus {
+    border-color: #1a73e8;
+    outline: none;
+    background: #ffffff;
+}
+
+.bd-namaz-form input[type="submit"] {
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: #1a73e8;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.bd-namaz-form input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Table Styling */
+.timing-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: 1rem;
 }
 
-#bd-namaz-timetable-plugin .timing-table th {
-    background: #009688;
-    color: #fff;
-    padding: 10px;
+.timing-table thead {
+    background: #1a73e8;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.timing-table thead th {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.timing-table tbody tr {
+    background: #ffffff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.timing-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.timing-table tbody tr:hover {
+    background-color: #e6f2ff;
+}
+
+.timing-table td {
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.timing-table td:first-child {
+    font-weight: bold;
+    color: #333333;
     text-align: left;
-    font-size: 1em;
 }
 
-#bd-namaz-timetable-plugin .timing-table td {
+.timing-table td:last-child {
+    color: #555555;
+    text-align: right;
+}
+
+/* Sahri and Iftar Section */
+.sehri-iftar-section {
+    margin: 30px auto;
+    padding: 20px;
+    background: #1a73e8;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sehri-iftar-section h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sehri-iftar-section p {
+    font-size: 1.3rem;
+    margin: 10px 0;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
-    font-size: 0.95em;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: inline-block;
 }
 
-#bd-namaz-timetable-plugin .timing-table tr:nth-child(even) {
-    background: #f1f1f1;
+.sehri-iftar-section p span {
+    font-weight: bold;
+    color: #ffe066;
+    text-shadow: 0px 2px 4px rgba(255, 224, 102, 0.8);
 }
 
-#bd-namaz-timetable-plugin .timing-table tr:hover {
-    background: #e0f7fa;
-}
-
-#bd-namaz-timetable-plugin .bd-namaz-form {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 10px;
-    justify-content: center;
-}
-
-#bd-namaz-timetable-plugin .bd-namaz-form label {
-    font-size: 1em;
-    color: #333;
-}
-
-#bd-namaz-timetable-plugin .bd-namaz-form select {
-    padding: 5px 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#bd-namaz-timetable-plugin .bd-namaz-form input[type="submit"] {
-    background: #00796b;
-    color: #fff;
-    border: none;
-    padding: 8px 15px;
-    font-size: 1em;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-#bd-namaz-timetable-plugin .bd-namaz-form input[type="submit"]:hover {
-    background: #004d40;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    #bd-namaz-timetable-plugin .timing-table th,
-    #bd-namaz-timetable-plugin .timing-table td {
-        font-size: 0.9em;
-        padding: 8px;
+    .bd-namaz-timetable {
+        padding: 15px;
     }
 
-    #bd-namaz-timetable-plugin h3 {
-        font-size: 1.2em;
+    .bd-namaz-timetable h3 {
+        font-size: 1.8rem;
     }
 
-    #bd-namaz-timetable-plugin .bd-namaz-form {
-        flex-direction: column;
-        gap: 15px;
+    .bd-namaz-form label,
+    .bd-namaz-form select,
+    .bd-namaz-form input[type="submit"] {
+        font-size: 0.9rem;
+    }
+
+    .timing-table thead th,
+    .timing-table tbody td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .sehri-iftar-section h4 {
+        font-size: 1.6rem;
+    }
+
+    .sehri-iftar-section p {
+        font-size: 1rem;
+    }
+}
+
+/* High-Resolution Styling */
+@media (min-width: 1200px) {
+    .bd-namaz-timetable {
+        max-width: 1000px;
+    }
+
+    .bd-namaz-timetable h3 {
+        font-size: 2.8rem;
+    }
+
+    .sehri-iftar-section h4 {
+        font-size: 2.2rem;
+    }
+
+    .sehri-iftar-section p {
+        font-size: 1.4rem;
     }
 }
